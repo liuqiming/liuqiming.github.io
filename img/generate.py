@@ -3,7 +3,7 @@ import json
 import codecs
 
 template = """
-<div class="card item col-lg-3 col-md-4 col-sm-6 col-12">
+<div class="card item col-lg-3 col-md-4 col-sm-6 col-12 mr-1">
 <img src="img/{name}" alt="image">
 <a href="img/{name}" data-lightbox="image-{number}" data-title="{description}" class="has-border">
 <span class="icon-search"></span>
@@ -22,6 +22,7 @@ n = 1
 with codecs.open("images.html", "w", "utf-8") as wf:
     for name in os.listdir("."):
         if name.endswith(".jpg"):
+            print("write {}".format(name))
             title = name.rstrip(".jpg")
             description = ""
             if title in products:
@@ -32,7 +33,8 @@ with codecs.open("images.html", "w", "utf-8") as wf:
                 "description": description,
                 "number": n
             }
-            wf.write(template.format(**p))
+            parts = template.format(**p)
+            wf.write(parts)
             n += 1
 
 
