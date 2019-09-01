@@ -3,10 +3,10 @@ import json
 import codecs
 
 template = """
-<div class="card item col-lg-3 col-md-4 col-sm-6 col-12 mr-1">
-<img src="img/{name}" alt="image">
+<div class="card item col-lg-3 col-md-4 col-sm-6 col-12">
+<h5 class="item-title">{title}</h5>
+<img src="img/{name}" alt="image" />
 <a href="img/{name}" data-lightbox="image-{number}" data-title="{description}" class="has-border">
-<span class="icon-search"></span>
 </a>
 <div class="card-body">
 <h5 class="card-title">{title}</h5>

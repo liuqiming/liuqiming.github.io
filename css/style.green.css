@@ -32,8 +32,8 @@ header {
 
 section {
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 section.section--no-padding {
@@ -2305,7 +2305,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 h2,
